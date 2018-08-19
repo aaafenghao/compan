@@ -1,0 +1,5 @@
+WebFlux练习项目
+
+web项目的starter和webFlux项目的starter不能共存
+兼容的话需要排除tomcat容器，不然默认是启动tomcat容器
+在tomcat下相关的webFlux路径是访问不到的
