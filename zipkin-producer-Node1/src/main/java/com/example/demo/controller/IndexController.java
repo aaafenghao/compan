@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 	
 	private final static Logger logger = LoggerFactory.getLogger(IndexController.class);
+
 	
 	@GetMapping("index")
-	public String index(String test) {
-		logger.error("node1 param:"+test);
+	public String index(String message) {
 		return "Sucess";
 	}
 

@@ -16,7 +16,7 @@ public class RetryCompent {
 	private final static Logger logger = LoggerFactory.getLogger(RetryCompent.class);
 	
 	
-	@Retryable(value = {RemoteAccessException.class},maxAttempts=3,backoff=@Backoff(delay=5000,multiplier=1))
+	@Retryable(value = {RemoteAccessException.class},maxAttempts=3,backoff=@Backoff(delay=5000,multiplier=2))
 	public void call() throws Exception{
 		logger.error("\n"+new Date().toString());
 		throw new RemoteAccessException("RPC调用异常");
